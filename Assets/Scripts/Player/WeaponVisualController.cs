@@ -8,29 +8,28 @@ namespace Player
         private static readonly int Reload = Animator.StringToHash("Reload");
         private static readonly int WeaponEquipType = Animator.StringToHash("WeaponEquipType");
         private static readonly int EquipWeapon = Animator.StringToHash("EquipWeapon");
-        private static readonly int BusyEquippingWeapon = Animator.StringToHash("BusyEquippingWeapon");
         private static readonly int EquipSpeed = Animator.StringToHash("EquipSpeed");
         private static readonly int ReloadSpeed = Animator.StringToHash("ReloadSpeed");
-        private Animator _anim;
-        private bool _busyEquippingWeapon;
-        private Player _player;
+        private static readonly int Fire = Animator.StringToHash("Fire");
 
         [SerializeField] private WeaponModel[] weaponModels;
         [SerializeField] private BackupWeaponModel[] backupWeaponModels;
-        
-    
+
+
         [Header("Rig")]
         [SerializeField] private float rigIncreaseStep;
-        private bool _rigShouldBeIncreased;
-        private Rig _rig;
 
-    
+
         [Header("Left hand IK")]
         [SerializeField] private Transform leftHandIKTarget;
+
         [SerializeField] private TwoBoneIKConstraint leftHandIK;
         [SerializeField] private float leftHandIKIncreaseStep;
+        private Animator _anim;
         private bool _leftHandWeightShouldBeIncreased;
-
+        private Player _player;
+        private Rig _rig;
+        private bool _rigShouldBeIncreased;
 
 
         private void Start()
@@ -49,18 +48,17 @@ namespace Player
             UpdateLeftHandIKWeight();
         }
 
+        public void PlayFireAnimation() => _anim.SetTrigger(Fire);
+
         public void PlayReloadAnimation()
         {
-            if(_busyEquippingWeapon)
-                return;
-        
             float reloadSpeed = _player.WeaponController.CurrentWeapon().reloadSpeed;
             
             _anim.SetFloat(ReloadSpeed, reloadSpeed);
             _anim.SetTrigger(Reload);
             ReduceRigWeight();
         }
-        
+
 
         public void PlayWeaponEquipAnimation()
         {
@@ -73,17 +71,8 @@ namespace Player
             _anim.SetFloat(WeaponEquipType, ((float)equipType));
             _anim.SetTrigger(EquipWeapon);
             _anim.SetFloat(EquipSpeed, equipSpeed);
+        }
 
-            SetBusyEquippingWeaponTo(true);
-        }
-        
-        public void SetBusyEquippingWeaponTo(bool busy)
-        {
-            _busyEquippingWeapon = busy;
-            _anim.SetBool(BusyEquippingWeapon, _busyEquippingWeapon);
-        }
-        
-        
 
         public void SwitchOnCurrentWeaponModel()
         {
@@ -99,7 +88,7 @@ namespace Player
             AttachLeftHand();
         }
 
-        private WeaponModel GetCurrentWeaponModel()
+        public WeaponModel GetCurrentWeaponModel()
         {
             WeaponType currentWeaponType = _player.WeaponController.CurrentWeapon().weaponType;
             
@@ -125,21 +114,40 @@ namespace Player
         {
             foreach (BackupWeaponModel backupWeaponModel in backupWeaponModels)
             {
-                backupWeaponModel.gameObject.SetActive(false);
+                backupWeaponModel.Activate(false);
             }
         }
 
         public void SwitchOnBackupWeaponModel()
         {
-            WeaponType weaponType = _player.WeaponController.BackupWeapon().weaponType;
+            SwitchOffBackupWeaponModels();
+
+            BackupWeaponModel lowHangWeapon = null;
+            BackupWeaponModel backHangWeapon = null;
+            BackupWeaponModel sideHangWeapon = null;
 
             foreach (BackupWeaponModel backupWeaponModel in backupWeaponModels)
             {
-                if(backupWeaponModel.weaponType == weaponType)
-                    backupWeaponModel.gameObject.SetActive(true);
+                if(backupWeaponModel.weaponType == _player.WeaponController.CurrentWeapon().weaponType) continue;
+                
+                if (_player.WeaponController.GetWeaponInSlots(backupWeaponModel.weaponType) != null)
+                {
+                    if (backupWeaponModel.IsHangTypeMatch(HangType.LowBackHang))
+                        lowHangWeapon = backupWeaponModel;
+                    
+                    if (backupWeaponModel.IsHangTypeMatch(HangType.BackHang))
+                        backHangWeapon = backupWeaponModel;
+                    
+                    if (backupWeaponModel.IsHangTypeMatch(HangType.SideHang))
+                        sideHangWeapon = backupWeaponModel;
+                }
             }
+            
+            lowHangWeapon?.Activate(true);
+            backHangWeapon?.Activate(true);
+            sideHangWeapon?.Activate(true);
         }
-        
+
 
         private void SwitchAnimationLayer(int layerIndex)
         {
@@ -150,10 +158,10 @@ namespace Player
 
             _anim.SetLayerWeight(layerIndex, 1);
         }
-        
-        
+
+
         #region Animation Rigging Methods
-        
+
         private void UpdateLeftHandIKWeight()
         {
             if (_leftHandWeightShouldBeIncreased)
@@ -166,6 +174,7 @@ namespace Player
                 }
             }
         }
+
         private void UpdateRigWeight()
         {
             if (_rigShouldBeIncreased)
@@ -179,6 +188,7 @@ namespace Player
 
             }
         }
+
         private void AttachLeftHand()
         {
             Transform targetTransform = GetCurrentWeaponModel().holdPoint;
@@ -186,13 +196,15 @@ namespace Player
             leftHandIKTarget.localPosition = targetTransform.localPosition;
             leftHandIKTarget.localRotation = targetTransform.localRotation;
         }
+
         private void ReduceRigWeight()
         {
             _rig.weight = 0.15f;
         }
+
         public void ReturnRigWeightToOne() => _rigShouldBeIncreased = true;
         public void ReturnWeightToLeftHandIK() => _leftHandWeightShouldBeIncreased = true;
-        
+
         #endregion
     }
 }

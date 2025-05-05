@@ -19,12 +19,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0f85e65-aa47-44ea-9764-66701fc16ca5" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Top-Down Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Top-Down Shooter/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Animator Controllers/AC_Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Animator Controllers/AC_Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Object/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Object/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackupWeaponModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BackupWeaponModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftHandTargetTransform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftHandTargetTransform.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAim.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeaponController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/WeaponVisualController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/WeaponVisualController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="repository" />
+    </option>
   </component>
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
@@ -32,19 +53,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "xqy272"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;xqy272&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/xqy272/Top-Down-Shooter.git",
-    "accountId": "77816eab-c4ad-43cd-a3c2-035e20bb85c6"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/xqy272/Top-Down-Shooter.git&quot;,
+    &quot;accountId&quot;: &quot;77816eab-c4ad-43cd-a3c2-035e20bb85c6&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@7fe8299111a7/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@39bda2df468a/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -54,7 +76,7 @@
 }</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -64,37 +86,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ml.llm.AIAssistantPromptsLibrary",
-    "vue.rearranger.settings.migration": "true",
-    "附加到 Unity 编辑器.附加到 Unity 编辑器.executor": "dotTrace Profiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.AIAssistantPromptsLibrary&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;附加到 Unity 编辑器.附加到 Unity 编辑器.executor&quot;: &quot;dotTrace Profiler&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="QodanaCIConfigService">
     <option name="ciType" value="GITHUB" />
     <option name="path" value="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" />
   </component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="C:\Users\QingYang\AppData\Local\Temp\qodana_output2\qodana.sarif.json" reportGuid="1c552a73-d21a-4e77-aad7-c9395e2210cf" reportId="Top-Down Shooter/qodana/2025-05-04" />
+  <component name="QodanaCloudProjectLink">
+    <option name="lastReportId" value="GZJoZ" />
+    <option name="linkedProjectId" value="ayOeD" />
+    <option name="linkedProjectName" value="My first project" />
+    <option name="organizationId" value="Z0OJO" />
+    <option name="userId" value="40dko" />
+  </component>
+  <component name="QodanaHighlightedReportService">
+    <option name="cloudReportPersistedInfo">
+      <CloudReportPersistedInfo>
+        <option name="projectId" value="ayOeD" />
+        <option name="reportId" value="GZJoZ" />
+      </CloudReportPersistedInfo>
     </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
   </component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
@@ -164,7 +199,10 @@
       <workItem from="1746107326542" duration="426000" />
       <workItem from="1746340388336" duration="149000" />
       <workItem from="1746340679607" duration="10389000" />
-      <workItem from="1746352758635" duration="654000" />
+      <workItem from="1746352758635" duration="1940000" />
+      <workItem from="1746364145093" duration="11025000" />
+      <workItem from="1746430582011" duration="14285000" />
+      <workItem from="1746458487472" duration="2967000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -174,7 +212,31 @@
       <option name="project" value="LOCAL" />
       <updated>1746353216717</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Remove unused folder reference from project file">
+      <option name="closed" value="true" />
+      <created>1746353428084</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746353428084</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&quot;Add meta files and prefabs for Unity project assets&quot;">
+      <option name="closed" value="true" />
+      <created>1746353608385</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746353608385</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;Add project configuration files and Unity package dependencies&quot;">
+      <option name="closed" value="true" />
+      <created>1746353785591</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746353785591</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +265,11 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="Remove unused folder reference from project file&#10;&#10;The folder reference to &quot;Assets\Hovl Studio\Demo scene\&quot; was unnecessary and has been removed. This change cleans up the project file and eliminates redundant entries." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused folder reference from project file&#10;&#10;The folder reference to &quot;Assets\Hovl Studio\Demo scene\&quot; was unnecessary and has been removed. This change cleans up the project file and eliminates redundant entries." />
+    <MESSAGE value="Remove unused folder reference from project file&#10;&#10;The reference to &quot;Assets\Hovl Studio\Demo scene\&quot; was removed as it is no longer required. This change cleans up the project file to avoid unnecessary clutter." />
+    <MESSAGE value="Remove unused folder reference from project file" />
+    <MESSAGE value="&quot;Add meta files and prefabs for Unity project assets&quot;" />
+    <MESSAGE value="&quot;Add project configuration files and Unity package dependencies&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add project configuration files and Unity package dependencies&quot;" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

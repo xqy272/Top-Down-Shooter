@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,85 +6,133 @@ namespace Player
 {
     public class PlayerWeaponController : MonoBehaviour
     {
-        private Player _player;
-        private static readonly int Fire = Animator.StringToHash("Fire");
+        [ Header( "Bullet" )]
+        private const float ReferenceBulletSpeed = 20f;
+        // private static readonly int Fire = Animator.StringToHash("Fire");
 
 
         [SerializeField] private Weapon currentWeapon;
-    
-    
-        [ Header( "Bullet" )]
-        private const float ReferenceBulletSpeed = 20f;
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private float bulletSpeed;
-        [SerializeField] private Transform bulletSpawnPoint;
-    
-    
+
+
         [SerializeField] private Transform weaponHolder;
 
-        [Header("Inventory")] [SerializeField] private List<Weapon> weaponSlots;
+        [Header("Inventory")]
+        [SerializeField] private int maxSlots = 2;
+
+        [SerializeField] private List<Weapon> weaponSlots;
+        private bool _isShooting;
+        private Player _player;
+        private bool _weaponReady;
 
         private void Start()
         {
             _player = GetComponent<Player>();
             AssignInputEvents();
         
-            currentWeapon.bulletsInMagazine = currentWeapon.totalReserveAmmo;
+            Invoke(nameof(EquipStartingWeapon), 0.1f);
         }
 
-        
-private void AssignInputEvents()
-{
-    var controller = _player.PlayerController;
-    AssignWeaponActionEvents(controller);
-    AssignEquipmentEvents(controller);
-}
-
-private void AssignWeaponActionEvents(PlayerController controller)
-{
-    controller.Character.Fire.performed += _ => Shoot();
-    controller.Character.Reload.performed += _ =>
-    {
-        if (currentWeapon.CanReload())
+        private void Update()
         {
-            _player.WeaponVisualController.PlayReloadAnimation();
+            if(_isShooting)
+                Shoot();
         }
-    };
-}
 
-private void AssignEquipmentEvents(PlayerController controller)
-{
-    controller.Character.EquipSlot1.performed += _ => EquipWeapon(0);
-    controller.Character.EquipSlot2.performed += _ => EquipWeapon(1);
-    controller.Character.DropCurrentWeapon.performed += _ => DropWeapon();
-}
 
         private void Shoot()
         {
-            if(currentWeapon.CanShoot() == false)
+            if(!WeaponReady()) return;
+            
+            if(!currentWeapon.CanShoot()) return;
+            
+            _player.WeaponVisualController.PlayFireAnimation();
+            
+            if(currentWeapon.shootType == ShootType.Single) _isShooting = false;
+
+            if (currentWeapon.BurstActivated() == true)
+            {
+                StartCoroutine(BurstFire());
                 return;
-        
-        
-            GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.LookRotation(bulletSpawnPoint.forward));
-        
-            Rigidbody rb = newBullet.GetComponent<Rigidbody>();
-            rb.mass = ReferenceBulletSpeed / bulletSpeed;
-            rb.linearVelocity = BulletDirection() * bulletSpeed;
-        
-            Destroy(newBullet, 3f);
-        
-            GetComponentInChildren<Animator>().SetTrigger(Fire);
+            }
+            
+            FireSingleBullet();
         }
+
+        private IEnumerator BurstFire()
+        {
+            SetWeaponReady(false);
+            
+            for (int i = 1; i <= currentWeapon.bulletsPerShot; i++)
+            {
+                FireSingleBullet();
+                
+                yield return new WaitForSeconds(currentWeapon.burstFireDelay);
+                
+                if(i >= currentWeapon.bulletsPerShot)
+                    SetWeaponReady(true);
+            }
+            
+            SetWeaponReady(true);
+        }
+
+
+        #region AssignInputEvents
+
+        private void AssignInputEvents()
+        {
+            var controller = _player.PlayerController;
+            AssignWeaponActionEvents(controller);
+            AssignEquipmentEvents(controller);
+        }
+
+        private void AssignWeaponActionEvents(PlayerController controller)
+        {
+            controller.Character.Fire.performed += _ => _isShooting = true;
+            controller.Character.Fire.canceled += _ => _isShooting = false;
+            controller.Character.Reload.performed += _ =>
+            {
+                if (currentWeapon.CanReload() && WeaponReady())
+                {
+                    Reload();
+                }
+            };
+        }
+
+        private void AssignEquipmentEvents(PlayerController controller)
+        {
+            controller.Character.EquipSlot1.performed += _ => EquipWeapon(0);
+            controller.Character.EquipSlot2.performed += _ => EquipWeapon(1);
+            controller.Character.EquipSlot3.performed += _ => EquipWeapon(2);
+            controller.Character.EquipSlot4.performed += _ => EquipWeapon(3);
+            controller.Character.EquipSlot5.performed += _ => EquipWeapon(4);
+            
+            controller.Character.DropCurrentWeapon.performed += _ => DropWeapon();
+
+            controller.Character.ToogleWeaponMode.performed += _ => currentWeapon.ToggleBurst();
+        }
+
+        #endregion
+
+
+        #region Slots Management - Pickup\Drop\Equip\Ready Weapon
 
         private void EquipWeapon(int i)
         {
+            if(i >= weaponSlots.Count) return;
+            
+            SetWeaponReady(false);
+            
             currentWeapon = weaponSlots[i];
             _player.WeaponVisualController.PlayWeaponEquipAnimation();
+            
+            CameraManager.Instance.ChangeCameraDistance(currentWeapon.cameraDistance);
         }
 
         public void PickupWeapon(Weapon newWeapon)
         {
-            if (weaponSlots.Count >= 2)
+            if (weaponSlots.Count >= maxSlots)
                 return;
             
             weaponSlots.Add(newWeapon);
@@ -100,31 +149,70 @@ private void AssignEquipmentEvents(PlayerController controller)
             EquipWeapon(0);
         }
 
-        public Vector3 BulletDirection()
+        private void Reload()
         {
-            // weaponHolder.LookAt(aim);
-            // bulletSpawnPoint.LookAt(aim);todo:Lock at Aim.
-
-            Transform aim = _player.PlayerAim.Aim();
-        
-            Vector3 direction = (aim.position - bulletSpawnPoint.position).normalized;
-        
-            return direction;
+            SetWeaponReady(false);
+            _player.WeaponVisualController.PlayReloadAnimation();
         }
 
-        public Weapon BackupWeapon()
+        private void EquipStartingWeapon()
+        {
+            EquipWeapon(0);
+        }
+
+        public Weapon CurrentWeapon() => currentWeapon;
+
+        public bool HasOnlyOneWeapon() => weaponSlots.Count < 2;
+
+        public Weapon GetWeaponInSlots(WeaponType weaponType)
         {
             foreach (Weapon weapon in weaponSlots)
             {
-                if (weapon != currentWeapon)
+                if(weapon.weaponType == weaponType)
                     return weapon;
             }
             return null;
         }
-    
-        public Transform BulletSpawnPoint() => bulletSpawnPoint;
-        public Weapon CurrentWeapon() => currentWeapon;
 
-        public bool HasOnlyOneWeapon() => weaponSlots.Count < 2;
+        public void SetWeaponReady(bool ready) => _weaponReady = ready;
+        public bool WeaponReady() => _weaponReady;
+
+        #endregion
+
+
+        #region Bullet
+
+        private void FireSingleBullet()
+        {
+            currentWeapon.bulletsInMagazine--;
+            
+            GameObject newBullet = ObjectPool.Instance.GetBullet();
+
+            newBullet.transform.position = BulletSpawnPoint().position;
+            newBullet.transform.rotation = Quaternion.LookRotation(BulletSpawnPoint().forward);
+        
+            Rigidbody rb = newBullet.GetComponent<Rigidbody>();
+            
+            Bullet bulletScript = newBullet.GetComponent<Bullet>();
+            bulletScript.BulletSetup(currentWeapon.gunDistance);
+            
+            Vector3 bulletDirection = currentWeapon.ApplySpread(BulletDirection());
+            
+            rb.mass = ReferenceBulletSpeed / bulletSpeed;
+            rb.linearVelocity = bulletDirection * bulletSpeed;
+        }
+
+        public Vector3 BulletDirection()
+        {
+            Transform aim = _player.PlayerAim.Aim();
+        
+            Vector3 direction = (aim.position - BulletSpawnPoint().position).normalized;
+        
+            return direction;
+        }
+
+        public Transform BulletSpawnPoint() => _player.WeaponVisualController.GetCurrentWeaponModel().bulletSpawnPoint;
+
+        #endregion
     }
 }

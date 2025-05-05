@@ -60,6 +60,33 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Equip Slot-3",
+                    "type": "Button",
+                    "id": "efbd94f5-2343-4529-8182-e2342e30811f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Equip Slot-4",
+                    "type": "Button",
+                    "id": "102ef3b2-ebab-4687-83f6-2121f221bd01",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Equip Slot-5",
+                    "type": "Button",
+                    "id": "83554aa3-e7cb-4531-ae37-13c1786115ed",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Drop Current Weapon",
                     "type": "Button",
                     "id": "8e3357a2-152c-4e16-b163-97dc6863204b",
@@ -72,6 +99,15 @@
                     "name": "Reload",
                     "type": "Button",
                     "id": "a7e652fb-11a5-4a23-9741-da6e439b40fd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Toogle Weapon Mode",
+                    "type": "Button",
+                    "id": "934a1c10-f0f5-45f1-8c51-ce40e50d652d",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -208,6 +244,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb606842-7b60-4e0b-b296-95d4efba5611",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Equip Slot-3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "607443ec-d403-4691-821a-e25a297f8a54",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Equip Slot-4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fd9c52c2-fd4b-4e8a-baed-f0252e424847",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Equip Slot-5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50b55d23-88f8-43df-b9da-ebc6b77107b5",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toogle Weapon Mode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

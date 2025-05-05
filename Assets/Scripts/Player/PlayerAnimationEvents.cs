@@ -12,11 +12,13 @@ namespace Player
             _visualController = GetComponentInParent<WeaponVisualController>();
             _weaponController = GetComponentInParent<PlayerWeaponController>();
         }
-     
+
         public void ReloadIsOver()
         {
             _visualController.ReturnRigWeightToOne();
             _weaponController.CurrentWeapon().ReloadBullets();
+            
+            _weaponController.SetWeaponReady(true);
         }
 
         public void ReturnRig()
@@ -27,7 +29,7 @@ namespace Player
 
         public void WeaponEquipIsOver()
         {
-            _visualController.SetBusyEquippingWeaponTo(false);
+            _weaponController.SetWeaponReady(true);
         }
 
         public void SwitchOnWeaponModel() => _visualController.SwitchOnCurrentWeaponModel();
