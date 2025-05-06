@@ -11,5 +11,5 @@ public class BackupWeaponModel : MonoBehaviour
 
     public void Activate(bool activated) => gameObject.SetActive(activated);
 
-    public bool IsHangTypeMatch(HangType hangType) => this.hangType == hangType;
+    public bool IsHangTypeMatch(HangType targetHangType) => this.hangType == targetHangType;
 }

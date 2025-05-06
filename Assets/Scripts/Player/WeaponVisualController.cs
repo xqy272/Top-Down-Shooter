@@ -52,7 +52,7 @@ namespace Player
 
         public void PlayReloadAnimation()
         {
-            float reloadSpeed = _player.WeaponController.CurrentWeapon().reloadSpeed;
+            float reloadSpeed = _player.WeaponController.CurrentWeapon().ReloadSpeed;
             
             _anim.SetFloat(ReloadSpeed, reloadSpeed);
             _anim.SetTrigger(Reload);
@@ -64,7 +64,7 @@ namespace Player
         {
             EquipType equipType = GetCurrentWeaponModel().equipType;
             
-            float equipSpeed = _player.WeaponController.CurrentWeapon().equipSpeed;
+            float equipSpeed = _player.WeaponController.CurrentWeapon().EquipSpeed;
             
             leftHandIK.weight = 0;
             ReduceRigWeight();

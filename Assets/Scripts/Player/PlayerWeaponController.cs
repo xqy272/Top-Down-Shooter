@@ -11,6 +11,7 @@ namespace Player
         // private static readonly int Fire = Animator.StringToHash("Fire");
 
 
+        [SerializeField] private WeaponData defaultWeaponData;
         [SerializeField] private Weapon currentWeapon;
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private float bulletSpeed;
@@ -51,7 +52,7 @@ namespace Player
             
             if(currentWeapon.shootType == ShootType.Single) _isShooting = false;
 
-            if (currentWeapon.BurstActivated() == true)
+            if (currentWeapon.BurstActivated())
             {
                 StartCoroutine(BurstFire());
                 return;
@@ -64,13 +65,13 @@ namespace Player
         {
             SetWeaponReady(false);
             
-            for (int i = 1; i <= currentWeapon.bulletsPerShot; i++)
+            for (int i = 1; i <= currentWeapon.BulletsPerShot; i++)
             {
                 FireSingleBullet();
                 
-                yield return new WaitForSeconds(currentWeapon.burstFireDelay);
+                yield return new WaitForSeconds(currentWeapon.BurstFireDelay);
                 
-                if(i >= currentWeapon.bulletsPerShot)
+                if(i >= currentWeapon.BulletsPerShot)
                     SetWeaponReady(true);
             }
             
@@ -127,15 +128,15 @@ namespace Player
             currentWeapon = weaponSlots[i];
             _player.WeaponVisualController.PlayWeaponEquipAnimation();
             
-            CameraManager.Instance.ChangeCameraDistance(currentWeapon.cameraDistance);
+            CameraManager.Instance.ChangeCameraDistance(currentWeapon.CameraDistance);
         }
 
-        public void PickupWeapon(Weapon newWeapon)
+        public void PickupWeapon(WeaponData newWeaponData)
         {
             if (weaponSlots.Count >= maxSlots)
                 return;
             
-            weaponSlots.Add(newWeapon);
+            weaponSlots.Add(new Weapon(newWeaponData));
             _player.WeaponVisualController.SwitchOnBackupWeaponModel();
         }
 
@@ -157,6 +158,8 @@ namespace Player
 
         private void EquipStartingWeapon()
         {
+            weaponSlots[0] = new Weapon(defaultWeaponData);
+            
             EquipWeapon(0);
         }
 
@@ -186,7 +189,7 @@ namespace Player
         {
             currentWeapon.bulletsInMagazine--;
             
-            GameObject newBullet = ObjectPool.Instance.GetBullet();
+            GameObject newBullet = ObjectPool.Instance.GetObject(bulletPrefab);
 
             newBullet.transform.position = BulletSpawnPoint().position;
             newBullet.transform.rotation = Quaternion.LookRotation(BulletSpawnPoint().forward);
@@ -194,7 +197,7 @@ namespace Player
             Rigidbody rb = newBullet.GetComponent<Rigidbody>();
             
             Bullet bulletScript = newBullet.GetComponent<Bullet>();
-            bulletScript.BulletSetup(currentWeapon.gunDistance);
+            bulletScript.BulletSetup(currentWeapon.GunDistance);
             
             Vector3 bulletDirection = currentWeapon.ApplySpread(BulletDirection());
             

@@ -18,20 +18,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0f85e65-aa47-44ea-9764-66701fc16ca5" name="更改" comment="">
+    <list default="true" id="a0f85e65-aa47-44ea-9764-66701fc16ca5" name="更改" comment="ObjectPool">
+      <change afterPath="$PROJECT_DIR$/Assets/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_AutoRifle_D.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_AutoRifle_D.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Pistol_D.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Pistol_D.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Revolver_D.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Revolver_D.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Shotgun_D.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Shotgun_D.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Sniper_D.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Sniper_D.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PooledObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PooledObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Top-Down Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Top-Down Shooter/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Animator Controllers/AC_Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Animator Controllers/AC_Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Object/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Object/Bullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackupWeaponModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BackupWeaponModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftHandTargetTransform.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftHandTargetTransform.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemPickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ObjectPool.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAim.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeaponController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/WeaponVisualController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/WeaponVisualController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" afterDir="false" />
@@ -66,7 +78,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BackupWeaponModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@7fe8299111a7/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@39bda2df468a/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -76,7 +89,7 @@
 }</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -100,7 +113,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.AIAssistantPromptsLibrary&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;附加到 Unity 编辑器.附加到 Unity 编辑器.executor&quot;: &quot;dotTrace Profiler&quot;
+    &quot;附加到 Unity 编辑器.附加到 Unity 编辑器.executor&quot;: &quot;Debug&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;ChangesTree.GroupingKeys&quot;: [
@@ -113,23 +126,24 @@
     <option name="ciType" value="GITHUB" />
     <option name="path" value="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" />
   </component>
-  <component name="QodanaCloudProjectLink">
-    <option name="lastReportId" value="GZJoZ" />
-    <option name="linkedProjectId" value="ayOeD" />
-    <option name="linkedProjectName" value="My first project" />
-    <option name="organizationId" value="Z0OJO" />
-    <option name="userId" value="40dko" />
-  </component>
   <component name="QodanaHighlightedReportService">
-    <option name="cloudReportPersistedInfo">
-      <CloudReportPersistedInfo>
-        <option name="projectId" value="ayOeD" />
-        <option name="reportId" value="GZJoZ" />
-      </CloudReportPersistedInfo>
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="C:\Users\QingYang\AppData\Local\Temp\qodana_output2\qodana.sarif.json" />
+        <option name="reportGuid" value="e769f10e-2c12-4166-bbab-220e26364dd8" />
+        <option name="reportName" value="Top-Down Shooter/qodana/2025-05-06" />
+      </LocalReportPersistedInfo>
     </option>
   </component>
   <component name="QodanaIsSelectedPersistenceService">
     <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\QingYang\AppData\Local\Temp\qodana_output2\qodana.sarif.json" reportGuid="e769f10e-2c12-4166-bbab-220e26364dd8" reportId="Top-Down Shooter/qodana/2025-05-06" />
+      <ReportDescription localRun="true" path="C:\Users\QingYang\AppData\Local\Temp\qodana_output1\qodana.sarif.json" reportGuid="83380c6f-f39b-40f9-971c-3cff7871853e" reportId="Top-Down Shooter/qodana/2025-05-06" />
+      <ReportDescription localRun="true" path="C:\Users\QingYang\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="a0feae78-37e7-460a-99f9-140e7ba74a94" reportId="Top-Down Shooter/qodana/2025-05-06" />
+    </option>
   </component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
@@ -154,13 +168,15 @@
       <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26800">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="26800" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -202,7 +218,11 @@
       <workItem from="1746352758635" duration="1940000" />
       <workItem from="1746364145093" duration="11025000" />
       <workItem from="1746430582011" duration="14285000" />
-      <workItem from="1746458487472" duration="2967000" />
+      <workItem from="1746458487472" duration="3091000" />
+      <workItem from="1746514763837" duration="10000" />
+      <workItem from="1746514790736" duration="34000" />
+      <workItem from="1746514864141" duration="13182000" />
+      <workItem from="1746540684962" duration="2263000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -236,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746353785591</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="WeaponSystem">
+      <option name="closed" value="true" />
+      <created>1746461592555</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746461592555</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +297,9 @@
     <MESSAGE value="Remove unused folder reference from project file" />
     <MESSAGE value="&quot;Add meta files and prefabs for Unity project assets&quot;" />
     <MESSAGE value="&quot;Add project configuration files and Unity package dependencies&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add project configuration files and Unity package dependencies&quot;" />
+    <MESSAGE value="WeaponSystem" />
+    <MESSAGE value="ObjectPool" />
+    <option name="LAST_COMMIT_MESSAGE" value="ObjectPool" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

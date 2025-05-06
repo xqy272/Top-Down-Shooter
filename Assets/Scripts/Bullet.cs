@@ -19,21 +19,26 @@ public class Bullet : MonoBehaviour
         if (Vector3.Distance(_startPosition, transform.position) > _flyDistance - 1.5f)
             trailRenderer.time -= 2 * Time.deltaTime;
 
+        DisableBullet();
+
+        if (trailRenderer.time <= 0)
+            ObjectPool.Instance.ReturnObject(gameObject);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        CreateBulletImpactFX(collision);
+        ObjectPool.Instance.ReturnObject(gameObject);
+    }
+
+    private void DisableBullet()
+    {
         if (Vector3.Distance(_startPosition, transform.position) > _flyDistance && !_bulletDisabled)
         {
             sc.enabled = false;
             meshRenderer.enabled = false;
             _bulletDisabled = true;
         }
-
-        if (trailRenderer.time <= 0)
-            ObjectPool.Instance.ReturnBullet(gameObject);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        CreateBulletImpactFX(collision);
-        ObjectPool.Instance.ReturnBullet(gameObject);
     }
 
     public void BulletSetup(float flyDistance)
@@ -53,9 +58,10 @@ public class Bullet : MonoBehaviour
         {
             ContactPoint contact = collision.contacts[0];
             
-            GameObject newBulletImpactFX = Instantiate(bulletImpactFX, contact.point, Quaternion.LookRotation(contact.normal));
+            GameObject newBulletImpactFX = ObjectPool.Instance.GetObject(bulletImpactFX);
+            newBulletImpactFX.transform.position = contact.point;
             
-            Destroy(newBulletImpactFX, 0.5f);
+            ObjectPool.Instance.ReturnObject(newBulletImpactFX, 0.5f);
         }
     }
 }

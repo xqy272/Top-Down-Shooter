@@ -115,7 +115,7 @@ namespace Player
             float startWidth = laserStartWidth;
             float endWidth;
 
-            float gunDistance = _player.WeaponController.CurrentWeapon().gunDistance;
+            float gunDistance = _player.WeaponController.CurrentWeapon().GunDistance;
         
             Transform firstPoint = _player.WeaponController.BulletSpawnPoint();
             Vector3 laserDirection = _player.WeaponController.BulletDirection();
