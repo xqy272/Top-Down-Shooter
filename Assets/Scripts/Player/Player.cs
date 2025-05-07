@@ -8,8 +8,8 @@ namespace Player
         public PlayerAim PlayerAim {  get; private set; }
         public PlayerMovement Movement {  get; private set; }
         public PlayerWeaponController WeaponController { get; private set; }
-        
         public WeaponVisualController WeaponVisualController { get; private set; }
+        public PlayerInteraction Interaction { get; private set; }
 
         private void Awake()
         {
@@ -18,6 +18,7 @@ namespace Player
             Movement = GetComponent<PlayerMovement>();
             WeaponController = GetComponent<PlayerWeaponController>();
             WeaponVisualController = GetComponent<WeaponVisualController>();
+            Interaction = GetComponent<PlayerInteraction>();
         }
 
         private void OnEnable()

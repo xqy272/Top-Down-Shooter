@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Player
+namespace Object_Pool
 {
     public class ObjectPool : MonoBehaviour
     {
@@ -10,7 +10,10 @@ namespace Player
 
         [SerializeField] private int poolSize;
 
-        private readonly Dictionary<GameObject, Queue<GameObject>> _poolDictionary = new Dictionary<GameObject, Queue<GameObject>>();
+        [SerializeField] private GameObject weaponPickup;
+        [SerializeField] private GameObject ammoPickup;
+
+        private readonly Dictionary<GameObject, Queue<GameObject>> _poolDictionary = new();
 
         private void Awake()
         {
@@ -18,6 +21,12 @@ namespace Player
                 Instance = this;
             else
                 Destroy(gameObject);
+        }
+
+        private void Start()
+        {
+            InitializeNewPool(weaponPickup);
+            InitializeNewPool(ammoPickup);
         }
 
         private void InitializeNewPool(GameObject prefab)
@@ -33,7 +42,7 @@ namespace Player
         private void CreateNewObject(GameObject prefab)
         {
             GameObject newObject = Instantiate(prefab, transform);
-            newObject.AddComponent<PooledObject>().OriginalPrefab = prefab;
+            newObject.AddComponent<PooledObject>().originalPrefab = prefab;
             newObject.SetActive(false);
             _poolDictionary[prefab].Enqueue(newObject);
         }
@@ -53,7 +62,7 @@ namespace Player
 
         private void ReturnToPool(GameObject objectToReturn)
         {
-            GameObject originalPrefab = objectToReturn.GetComponent<PooledObject>().OriginalPrefab;
+            GameObject originalPrefab = objectToReturn.GetComponent<PooledObject>().originalPrefab;
             
             objectToReturn.SetActive(false);
             objectToReturn.transform.parent = transform;

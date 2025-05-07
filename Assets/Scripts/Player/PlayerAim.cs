@@ -1,4 +1,5 @@
 using UnityEngine;
+using Weapon_System;
 
 namespace Player
 {

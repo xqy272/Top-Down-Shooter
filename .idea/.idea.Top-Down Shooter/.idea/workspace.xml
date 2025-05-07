@@ -18,35 +18,202 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0f85e65-aa47-44ea-9764-66701fc16ca5" name="更改" comment="ObjectPool">
-      <change afterPath="$PROJECT_DIR$/Assets/Data.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_AutoRifle_D.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_AutoRifle_D.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Pistol_D.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Pistol_D.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Revolver_D.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Revolver_D.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Shotgun_D.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Shotgun_D.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Sniper_D.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Sniper_D.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PooledObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PooledObject.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs.meta" afterDir="false" />
+    <list default="true" id="a0f85e65-aa47-44ea-9764-66701fc16ca5" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Top-Down Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Top-Down Shooter/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Object/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Object/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Weapon_AutoRifle_D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Weapon_AutoRifle_D.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Weapon_Pistol_D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Pistol_D.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Weapon_Revolver_D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Revolver_D.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Weapon_Shotgun_D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Shotgun_D.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Weapon_Sniper_D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Weapon_Sniper_D.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input Manager/PlayerController.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Blue1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Blue1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Blue2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Blue2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Blue3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Blue3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Cyan.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Cyan.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Green1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Green1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Green2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Green2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Green3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Green3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Grey1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Grey1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Grey2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Grey2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Grey3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Grey3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Grey4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Grey4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Magenta.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Magenta.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Olive.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Olive.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Orange.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Orange.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Pink.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Pink.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Purple.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Purple.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Yellow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/HDRP/Prototype_512x512_Yellow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Blue1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Blue1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Blue2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Blue2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Blue3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Blue3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Cyan.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Cyan.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Green1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Green1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Green2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Green2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Green3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Green3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Grey1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Grey1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Grey2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Grey2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Grey3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Grey3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Grey4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Grey4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Magenta.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Magenta.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Orange.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Orange.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Pink.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Pink.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Purple.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Purple.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Yellow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/Prototype_512x512_Yellow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Blue1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Blue1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Blue2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Blue2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Blue3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Blue3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Cyan.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Cyan.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Green1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Green1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Green2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Green2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Green3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Green3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Grey1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Grey1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Grey2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Grey2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Grey3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Grey3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Grey4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Grey4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Magenta.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Magenta.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Olive.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Olive.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Orange.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Orange.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Pink.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Pink.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Purple.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Purple.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Yellow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Materials/URP/Prototype_512x512_Yellow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_blue1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_blue1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_blue2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_blue2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_blue3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_blue3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_brown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_brown.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_cyan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_cyan.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_green1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_green1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_green2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_green2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_green3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_green3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_grey1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_grey1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_grey2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_grey2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_grey3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_grey3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_grey4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_grey4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_magenta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_magenta.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_olive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_olive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_orange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_orange.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_pink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_pink.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_purple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_purple.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_white.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototype Material/Textures/prototype_512x512_yellow.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackupWeaponModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BackupWeaponModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackupWeaponModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackupWeaponModel.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemPickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ObjectPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemPickup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemPickup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ObjectPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ObjectPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAim.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeaponController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/WeaponVisualController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/WeaponVisualController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PooledObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PooledObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponModel.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +246,8 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BackupWeaponModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickupAmmo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickupWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@7fe8299111a7/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@39bda2df468a/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
@@ -89,7 +258,7 @@
 }</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -126,18 +295,6 @@
     <option name="ciType" value="GITHUB" />
     <option name="path" value="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" />
   </component>
-  <component name="QodanaHighlightedReportService">
-    <option name="localRunNotPublishedPersistedInfo">
-      <LocalReportPersistedInfo>
-        <option name="path" value="C:\Users\QingYang\AppData\Local\Temp\qodana_output2\qodana.sarif.json" />
-        <option name="reportGuid" value="e769f10e-2c12-4166-bbab-220e26364dd8" />
-        <option name="reportName" value="Top-Down Shooter/qodana/2025-05-06" />
-      </LocalReportPersistedInfo>
-    </option>
-  </component>
-  <component name="QodanaIsSelectedPersistenceService">
-    <option name="selectedOrLoading" value="true" />
-  </component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\QingYang\AppData\Local\Temp\qodana_output2\qodana.sarif.json" reportGuid="e769f10e-2c12-4166-bbab-220e26364dd8" reportId="Top-Down Shooter/qodana/2025-05-06" />
@@ -168,15 +325,13 @@
       <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26800">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="26800" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -222,7 +377,9 @@
       <workItem from="1746514763837" duration="10000" />
       <workItem from="1746514790736" duration="34000" />
       <workItem from="1746514864141" duration="13182000" />
-      <workItem from="1746540684962" duration="2263000" />
+      <workItem from="1746540684962" duration="2739000" />
+      <workItem from="1746596945480" duration="9958000" />
+      <workItem from="1746622344588" duration="12409000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -264,7 +421,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746461592555</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ObjectPool">
+      <option name="closed" value="true" />
+      <created>1746544789784</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746544789784</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

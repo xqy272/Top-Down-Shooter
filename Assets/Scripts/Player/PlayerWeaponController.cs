@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Interactive_System;
+using Object_Pool;
 using UnityEngine;
+using Weapon_System;
 
 namespace Player
 {
@@ -10,9 +13,9 @@ namespace Player
         private const float ReferenceBulletSpeed = 20f;
         // private static readonly int Fire = Animator.StringToHash("Fire");
 
-
         [SerializeField] private WeaponData defaultWeaponData;
         [SerializeField] private Weapon currentWeapon;
+
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private float bulletSpeed;
 
@@ -23,9 +26,12 @@ namespace Player
         [SerializeField] private int maxSlots = 2;
 
         [SerializeField] private List<Weapon> weaponSlots;
+
+        [SerializeField] private GameObject weaponPickupPrefabs;
         private bool _isShooting;
         private Player _player;
         private bool _weaponReady;
+
 
         private void Start()
         {
@@ -131,12 +137,27 @@ namespace Player
             CameraManager.Instance.ChangeCameraDistance(currentWeapon.CameraDistance);
         }
 
-        public void PickupWeapon(WeaponData newWeaponData)
+        public void PickupWeapon(Weapon newWeapon)
         {
-            if (weaponSlots.Count >= maxSlots)
+            if (GetWeaponInSlots(newWeapon.weaponType) != null)
+            {
+                GetWeaponInSlots(newWeapon.weaponType).totalReserveAmmo += newWeapon.bulletsInMagazine;
                 return;
+            }
+
+            if (weaponSlots.Count >= maxSlots && newWeapon.weaponType != currentWeapon.weaponType)
+            {
+                int weaponIndex = weaponSlots.IndexOf(currentWeapon);
+
+                _player.WeaponVisualController.SwitchOffWeaponModels();
+                weaponSlots[weaponIndex] = newWeapon;
+                
+                CreateWeaponOnTheGround();
+                EquipWeapon(weaponIndex);
+                return;
+            }
             
-            weaponSlots.Add(new Weapon(newWeaponData));
+            weaponSlots.Add(newWeapon);
             _player.WeaponVisualController.SwitchOnBackupWeaponModel();
         }
 
@@ -145,9 +166,17 @@ namespace Player
             if (HasOnlyOneWeapon())
                 return;
 
+            CreateWeaponOnTheGround();
+
             weaponSlots.Remove(currentWeapon);
 
             EquipWeapon(0);
+        }
+
+        private void CreateWeaponOnTheGround()
+        {
+            GameObject droppedWeapon = ObjectPool.Instance.GetObject(weaponPickupPrefabs);
+            droppedWeapon.GetComponent<PickupWeapon>()?.SetupPickupWeapon(currentWeapon, transform);
         }
 
         private void Reload()

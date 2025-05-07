@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using Weapon_System;
 
 namespace Player
 {
@@ -102,7 +103,7 @@ namespace Player
             return null;
         }
 
-        private void SwitchOffWeaponModels()
+        public void SwitchOffWeaponModels()
         {
             foreach (WeaponModel weaponModel in weaponModels)
             {

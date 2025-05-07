@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: Bolt R-7
   bulletsInMagazine: 6
   magazineCapacity: 6
-  totalReserveAmmo: 2147483647
+  totalReserveAmmo: 10000
   shootType: 0
   bulletsPerShot: 1
   fireRate: 2.5

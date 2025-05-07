@@ -12,7 +12,7 @@ public class CameraManager : MonoBehaviour
     private CinemachinePositionComposer _composer;
     private float _targetCameraDistance;
 
-    private CinemachineVirtualCameraBase _virtualCamera;
+    // private CinemachineVirtualCameraBase _virtualCamera;
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class CameraManager : MonoBehaviour
         else
             Destroy(this);
 
-        _virtualCamera = GetComponentInChildren<CinemachineVirtualCameraBase>();
+        // _virtualCamera = GetComponentInChildren<CinemachineVirtualCameraBase>();
         _composer = GetComponentInChildren<CinemachinePositionComposer>();
     }
 

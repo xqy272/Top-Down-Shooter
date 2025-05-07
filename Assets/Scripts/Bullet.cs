@@ -1,5 +1,4 @@
- 
-using Player;
+using Object_Pool;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour

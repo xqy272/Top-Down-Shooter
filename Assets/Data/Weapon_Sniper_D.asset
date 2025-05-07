@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: Stinger 97
   bulletsInMagazine: 15
   magazineCapacity: 15
-  totalReserveAmmo: 2147483647
+  totalReserveAmmo: 10000
   shootType: 0
   bulletsPerShot: 1
   fireRate: 1.5
