@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Enemy;
+using Enemy.Enemy_Melee;
 using Interactive_System;
 using Object_Pool;
 using UnityEngine;
@@ -9,13 +11,17 @@ namespace Player
 {
     public class PlayerWeaponController : MonoBehaviour
     {
-        [ Header( "Bullet" )]
-        private const float ReferenceBulletSpeed = 20f;
-        // private static readonly int Fire = Animator.StringToHash("Fire");
-
+        private Player _player;
+        
+        private bool _isShooting;
+        private bool _weaponReady;
+        
         [SerializeField] private WeaponData defaultWeaponData;
         [SerializeField] private Weapon currentWeapon;
-
+        
+        [ Header( "Bullet" )]
+        private const float ReferenceBulletSpeed = 20f;
+        [SerializeField] private float bulletImpactForce;
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private float bulletSpeed;
 
@@ -24,13 +30,10 @@ namespace Player
 
         [Header("Inventory")]
         [SerializeField] private int maxSlots = 2;
-
         [SerializeField] private List<Weapon> weaponSlots;
 
         [SerializeField] private GameObject weaponPickupPrefabs;
-        private bool _isShooting;
-        private Player _player;
-        private bool _weaponReady;
+        
 
 
         private void Start()
@@ -65,6 +68,8 @@ namespace Player
             }
             
             FireSingleBullet();
+            
+            TriggerEnemyDodge();
         }
 
         private IEnumerator BurstFire()
@@ -82,6 +87,19 @@ namespace Player
             }
             
             SetWeaponReady(true);
+        }
+
+        private void TriggerEnemyDodge()
+        {
+            Vector3 rayOrigin = BulletSpawnPoint().position;
+            Vector3 rayDirection = BulletDirection();
+
+            if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit, Mathf.Infinity))
+            {
+                EnemyMelee enemyMelee = hit.collider.gameObject.GetComponentInParent<EnemyMelee>();
+                if (enemyMelee)
+                    enemyMelee.ActivateDodgeRoll();
+            }
         }
 
 
@@ -134,7 +152,7 @@ namespace Player
             currentWeapon = weaponSlots[i];
             _player.WeaponVisualController.PlayWeaponEquipAnimation();
             
-            CameraManager.Instance.ChangeCameraDistance(currentWeapon.CameraDistance);
+            CameraManager.instance.ChangeCameraDistance(currentWeapon.CameraDistance);
         }
 
         public void PickupWeapon(Weapon newWeapon)
@@ -224,9 +242,9 @@ namespace Player
             newBullet.transform.rotation = Quaternion.LookRotation(BulletSpawnPoint().forward);
         
             Rigidbody rb = newBullet.GetComponent<Rigidbody>();
-            
             Bullet bulletScript = newBullet.GetComponent<Bullet>();
-            bulletScript.BulletSetup(currentWeapon.GunDistance);
+            
+            bulletScript.BulletSetup(currentWeapon.GunDistance, bulletImpactForce);
             
             Vector3 bulletDirection = currentWeapon.ApplySpread(BulletDirection());
             

@@ -51,20 +51,35 @@
     <Compile Include="Assets\Scripts\Weapon System\WeaponModel.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInteraction.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAnimationEvents.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy Melee\RecoveryState Melee.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy Melee\AttackState Melee.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerWeaponController.cs" />
     <Compile Include="Assets\Scripts\Weapon System\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAxe.cs" />
     <Compile Include="Assets\Scripts\Object Pool\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy Melee\IdleState Melee.cs" />
     <Compile Include="Assets\Scripts\Interactive System\ItemPickup.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy Melee\ChaseState Melee.cs" />
     <Compile Include="Assets\Scripts\Object Pool\PooledObject.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAim.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy Melee\MoveState Melee.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemy\StateMachine\EnemyState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy Melee\AbilityState Melee.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Weapon System\WeaponData.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyRagdoll.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Interactive System\PickupAmmo.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyShield.cs" />
     <Compile Include="Assets\Scripts\Player\WeaponVisualController.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Weapon System\BackupWeaponModel.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy Melee\DeadState Melee.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy Melee\EnemyMelee.cs" />
+    <Compile Include="Assets\Scripts\Enemy\StateMachine\EnemyStateMachine.cs" />
     <Compile Include="Assets\Scripts\CameraManager.cs" />
     <Compile Include="Assets\Scripts\Interactive System\PickupWeapon.cs" />
     <Reference Include="UnityEngine">
@@ -802,11 +817,14 @@
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Animation.Rigging.Editor">
-      <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging.Editor">
+      <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
@@ -898,6 +916,9 @@
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+      <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
@@ -916,6 +937,9 @@
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor">
+      <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
@@ -930,6 +954,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:\Users\QingYang\Top-Down Shooter\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    public static CameraManager Instance;
+    public static CameraManager instance;
 
     [Header("Camera Distance")]
     [SerializeField] private bool canChangeCameraDistance;
@@ -16,8 +16,8 @@ public class CameraManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
+        if (!instance)
+            instance = this;
         else
             Destroy(this);
 
